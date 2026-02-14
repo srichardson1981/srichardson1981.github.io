@@ -3,136 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Critical Inductance | Engineering Portfolio</title>
+    <title>Critical Inductance</title>
     <style>
         :root {
             --bg: #0a0a0c;
-            --card: #16161a;
-            --accent: #00ff9d; /* Circuit Green */
+            --accent: #00ff9d; 
             --text: #e0e0e0;
-            --dim: #888;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg);
             color: var(--text);
-            line-height: 1.6;
             margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            width: 100%;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
         }
 
         header {
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 20px;
-            margin-bottom: 40px;
+            border-left: 3px solid var(--accent);
+            padding-left: 20px;
         }
 
         h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
             letter-spacing: -1px;
             color: #fff;
+            text-transform: lowercase;
         }
 
         .subtitle {
             color: var(--accent);
             font-family: monospace;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            margin-top: 10px;
+            opacity: 0.8;
         }
 
-        .card {
-            background: var(--card);
-            border: 1px solid #2d2d35;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 24px;
-            transition: transform 0.2s ease;
-        }
-
-        .card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-        }
-
-        .tag {
+        /* Subtle pulse animation for that "live" feel */
+        .cursor {
             display: inline-block;
-            background: rgba(0, 255, 157, 0.1);
-            color: var(--accent);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .status-dot {
-            height: 10px;
             width: 10px;
-            background-color: var(--accent);
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 8px;
-            box-shadow: 0 0 8px var(--accent);
+            height: 1.2rem;
+            background: var(--accent);
+            margin-left: 5px;
+            animation: blink 1s infinite;
+            vertical-align: middle;
         }
 
-        footer {
-            margin-top: 60px;
-            font-size: 0.8rem;
-            color: var(--dim);
-            text-align: center;
-            font-family: monospace;
+        @keyframes blink {
+            50% { opacity: 0; }
         }
-
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
-<div class="container">
     <header>
-        <h1>Critical Inductance</h1>
-        <div class="subtitle">> System.init(hardware_portfolio)</div>
+        <h1>critical inductance</h1>
+        <div class="subtitle">system_status: standby<span class="cursor"></span></div>
     </header>
-
-    <section>
-        <div class="card">
-            <span class="tag">ACTIVE PROJECT</span>
-            <h2>Remote Transmitter Dashboard</h2>
-            <p>Real-time monitoring system for RF transmission hardware. Data is currently being routed via a <strong>GCP-hosted Debian instance</strong> with a SQL backend.</p>
-            <div style="font-family: monospace; font-size: 0.9rem;">
-                <span class="status-dot"></span> System Status: Waiting for API Link...
-            </div>
-        </div>
-
-        <div class="card">
-            <span class="tag">CORE COMPETENCIES</span>
-            <ul style="list-style-type: '→ '; padding-left: 20px;">
-                <li>Embedded Systems & Circuit Design</li>
-                <li>Python (CS50 Legacy) & Backend Logic</li>
-                <li>Cloud Infrastructure (GCP / Debian Linux)</li>
-                <li>Real-time Data Visualization</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>About the Lab</h2>
-            <p>Critical Inductance is a showcase of where software meets the physical world. From SQL queries to signal processing, this space tracks the evolution of my technical projects.</p>
-        </div>
-    </section>
-
-    <footer>
-        &copy; 2026 CRITICAL INDUCTANCE // BUILT ON GITHUB PAGES
-    </footer>
-</div>
 
 </body>
 </html>
